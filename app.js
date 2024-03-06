@@ -50,4 +50,16 @@ function decryptText(text) {
     return decryptedText;
 }
 
+// Funcion para el copypaste
+
+function copyToClipboard() {
+    const outputText = document.getElementById('outputText');
+    outputText.select();
+    document.execCommand('copy');
+
+// Después de copiar, deshabilitamos el botón de copiar
+    const copyButton = document.getElementById('copyButton');
+    copyButton.disabled = true;
+}
+
 
