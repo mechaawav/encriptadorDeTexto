@@ -1,27 +1,83 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; /* Fondo gris claro */
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.main-content {
+    display: flex;
+}
+
+.input-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#inputText {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-textarea, select, button {
+.output-section {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.output-image {
+    width: 60px;
+    height: 60px;
     margin-bottom: 10px;
 }
 
-button {
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rounded-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    background-color: #4CAF50; /* Verde */
+    color: #fff;
+    font-size: 16px;
 }
 
 footer {
     margin-top: 20px;
     text-align: center;
+    color: #555;
 }
