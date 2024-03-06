@@ -18,3 +18,36 @@ function processText() {
     copyButton.disabled = false;
 }
 
+// Generamos las reglas de encripte
+
+function encryptText(text) {
+    const encryptionMap = {
+        'e': 'enter',
+        'i': 'imes',
+        'a': 'ai',
+        'o': 'ober',
+        'u': 'ufat'
+    };
+
+// Aplicamos la encriptación
+    const encryptedText = text.replace(/[eioua]/g, match => encryptionMap[match]);
+    return encryptedText;
+}
+
+// Generamos funcion para la desencriptacion
+
+function decryptText(text) {
+    const decryptionMap = {
+        'enter': 'e',
+        'imes': 'i',
+        'ai': 'a',
+        'ober': 'o',
+        'ufat': 'u'
+    };
+
+// Aplicamos la desencriptación
+    const decryptedText = text.replace(/(enter|imes|ai|ober|ufat)/g, match => decryptionMap[match]);
+    return decryptedText;
+}
+
+
