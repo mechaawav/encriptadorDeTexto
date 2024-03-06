@@ -1,65 +1,31 @@
-// Creamos funcion para generar la introduccion a la encriptacion
-function processText() {
-    const inputText = document.getElementById('inputText').value;
-    const option = document.getElementById('option').value;
-    let result = '';
+function encryptText() {
+    var inputText = document.getElementById("inputText").value;
+    var resultMessage = document.getElementById("resultMessage");
 
-    if (option === 'encrypt') {
-        result = encryptText(inputText);
-    } else if (option === 'decrypt') {
-        result = decryptText(inputText);
+    if (inputText.trim() === "") {
+        resultMessage.textContent = "Ningún mensaje fue encontrado, ingresa el texto que desees encriptar o desencriptar";
+    } else {
+        var encryptedText = inputText.replace(/e/g, "enter")
+                                      .replace(/i/g, "imes")
+                                      .replace(/a/g, "ai")
+                                      .replace(/o/g, "ober")
+                                      .replace(/u/g, "ufat");
+        resultMessage.textContent = encryptedText;
     }
-
-    const outputText = document.getElementById('outputText');
-    outputText.value = result;
-
-    // Habilita el botón de copiar cuando se genera un resultado
-    const copyButton = document.getElementById('copyButton');
-    copyButton.disabled = false;
 }
 
-// Generamos las reglas de encripte
+function decryptText() {
+    var inputText = document.getElementById("inputText").value;
+    var resultMessage = document.getElementById("resultMessage");
 
-function encryptText(text) {
-    const encryptionMap = {
-        'e': 'enter',
-        'i': 'imes',
-        'a': 'ai',
-        'o': 'ober',
-        'u': 'ufat'
-    };
-
-// Aplicamos la encriptación
-    const encryptedText = text.replace(/[eioua]/g, match => encryptionMap[match]);
-    return encryptedText;
+    if (inputText.trim() === "") {
+        resultMessage.textContent = "Ningún mensaje fue encontrado, ingresa el texto que desees encriptar o desencriptar";
+    } else {
+        var decryptedText = inputText.replace(/enter/g, "e")
+                                      .replace(/imes/g, "i")
+                                      .replace(/ai/g, "a")
+                                      .replace(/ober/g, "o")
+                                      .replace(/ufat/g, "u");
+        resultMessage.textContent = decryptedText;
+    }
 }
-
-// Generamos funcion para la desencriptacion
-
-function decryptText(text) {
-    const decryptionMap = {
-        'enter': 'e',
-        'imes': 'i',
-        'ai': 'a',
-        'ober': 'o',
-        'ufat': 'u'
-    };
-
-// Aplicamos la desencriptación
-    const decryptedText = text.replace(/(enter|imes|ai|ober|ufat)/g, match => decryptionMap[match]);
-    return decryptedText;
-}
-
-// Funcion para el copypaste
-
-function copyToClipboard() {
-    const outputText = document.getElementById('outputText');
-    outputText.select();
-    document.execCommand('copy');
-
-// Después de copiar, deshabilitamos el botón de copiar
-    const copyButton = document.getElementById('copyButton');
-    copyButton.disabled = true;
-}
-
-

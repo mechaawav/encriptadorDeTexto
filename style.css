@@ -2,82 +2,70 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Fondo gris claro */
+    background-color: #F3F5FC ;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff; /* Fondo blanco */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    position: relative;
-}
-
-.logo {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.main-content {
-    display: flex;
-}
-
-.input-section {
-    flex: 1;
-    margin-right: 20px;
-}
-
-#inputText {
-    width: 100%;
+header {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    text-align:left;
 }
 
-.output-section {
-    flex: 1;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-}
-
-.output-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.output-image {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-}
-
-.action-buttons {
-    margin-top: 20px;
+main{
     display: flex;
     justify-content: space-around;
 }
 
-.rounded-button {
+.input-container {
+    margin-bottom: 20px;
+    width: 577px;
+    height: 48px;
+    top: 168px;
+    left: 240px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
     padding: 10px;
+    background-color: #F3F5FC ;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
     border: none;
+    resize: none;
+    color: #0A3871 ;
+}
+
+.result-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 944px;
+    top: 40px;
+    left: 1000px;
+    border-radius: 32px;
+
+}
+
+.button-container button {
+    padding: 10px;
+    margin: 0 10px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #4CAF50; /* Verde */
-    color: #fff;
-    font-size: 16px;
 }
 
 footer {
-    margin-top: 20px;
     text-align: center;
-    color: #555;
+    padding: 10px;
 }
