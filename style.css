@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    padding: 10px;
+    padding: 50px;
     text-align:left;
 }
 
@@ -58,12 +58,32 @@ textarea {
 
 }
 
+.mensajeResultado{
+    position: relative;
+    top: 40%;
+    font-family: Inter;
+    color: #0A3871;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
 .button-container button {
     padding: 10px;
     margin: 0 10px;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+.button-container button:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
 
 footer {
     text-align: center;
